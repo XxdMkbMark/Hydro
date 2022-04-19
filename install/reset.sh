@@ -1,7 +1,7 @@
 pm2 stop mongodb
 rm -rf /data/db /data/file
 mkdir /data/db /data/file
-pm2 start mongod
+pm2 start mongodb
 sleep 3
 db_password=$(cat /dev/urandom | head -n 10 | md5sum | head -c 20)
 echo "db.createUser({
